@@ -1,0 +1,658 @@
+@import "../../base/base";
+
+@import "../../base/responsive";
+@import "../../base/variable";
+@import "../../base/allMixin";
+@import "../../base/global";
+@import "../../css_Components/css__product/product";
+
+@import "../../css_Components/css__header/header";
+@import "../../css_Components/css__footer/footer";
+
+@import "../../css_Components/css__menu-header/menu__header";
+
+
+#banner-home{
+    border-top:1px solid rgba(34,34,34, 0.15);
+    .banner-home-wrapper{
+        padding:0px 6px;
+        background-color:$bg-banner-home;
+        .banner-home__heading{
+            text-align: center;
+            padding-left: 12px;
+            padding-right: 12px;
+            // letter-spacing: 0.5px;
+            word-spacing: -2px;
+            font-family: "GraphikLight";
+            font-weight: 300;
+
+            @include rpsMobie{
+                font-size:1.5rem;
+                line-height:28px;
+                padding-top:24px;
+                padding-bottom:6px;
+            }
+            @include rpsTablet{
+                font-size:2rem;
+                line-height:2.25rem;
+                padding-top:30px;
+                padding-bottom:12px;
+            }
+            @include rpsPc{
+                font-size:2rem;
+                line-height:2.25rem;
+                padding-top:30px;
+                padding-bottom:12px;
+            }
+        }
+        .banner-home__search-content{
+            max-width:1400px;
+            width:100%;
+            margin:0 auto;
+            @include rpsMobie{
+                padding:0 6px;
+            }
+            @include rpsTablet{
+                padding:0 36px;
+            }
+            .search-content--title{
+                padding-bottom:12px;
+                font-size:1.25rem;
+                line-height:28px;
+                font-family: "GraphikRegular";
+                text-align: center;
+                font-weight:600;
+                letter-spacing: 0.5px;
+                @include rpsMobie{
+                    font-size: 1.125rem;
+                    line-height:24px;
+                }
+                @include rpsTablet{
+                    font-size:1.25rem;
+                    line-height:28px;
+                }
+                @include rpsPc{
+                    font-size: 1.25rem;
+                    line-height:28px;
+                }
+            }
+            .search-content--wrapper{
+                .search-content--wrapper-link{
+                    padding-top:9px;
+                    padding-bottom:18px;
+                    text-decoration:none;
+                    color: $color__text-main;
+                    font-size:0.8125rem;
+                    font-family: "GraphikRegular",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                    display: block;
+                    text-align: center;
+                    font-weight: 500;
+                    
+                    .search-content--box-img{
+                        max-width:160px;
+                        width:100%;
+                        margin:0px auto 12px;
+                        img{
+                            width:100%;
+                            height: auto;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#box-products-popular{
+    .wrapper-products-popular{
+        width:100%;
+        max-width: 1400px;
+        margin:0 auto;
+        @include rpsMobie{
+            padding:0 6px;
+        }
+        @include rpsTablet{
+            padding:0 12px;
+        }
+        @include rpsPc{
+            padding:0 18px;
+        }
+        .box-suggested-searches{
+            width:100%;
+            max-width: 1400px;
+            margin:0px auto;
+            @include rpsMobie{
+                padding:0 6px;
+            }
+            @include rpsTablet{
+                padding:0 12px;
+            }
+            @include rpsPc{
+                padding:0 18px;
+            }
+            .box-suggested-searches__heading{
+                display:flex;
+                align-items : center;
+                padding:0;
+                h2{
+                    @include text__title(16);
+                    margin-right:12px;
+                    text-align:left;
+                }
+                p{
+                    @include text__title(13);
+                    text-align: left;
+                }
+            }
+            .box-suggested-searches__items{
+                .box-suggested-searches__items-list{
+                    display:flex;
+                    flex-wrap: wrap;
+                    overflow-y: hidden;
+                    padding-top:6px;
+                    padding-bottom:6px;
+                    height: 144px;
+                    margin:0 -12px;
+                    >li{
+                        height: 100px;
+                        width:110px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin:12px 12px 24px 6px;
+                        >a{
+                            color:$color__text-main;
+                            text-decoration:none;
+                            display:inline-block;
+                            background-color:rgba(255,255,255, 1);
+                            border-radius: 9px;
+                            position: relative;
+                            height: 100%;
+                            &::before{
+                                content: "";
+                                opacity: 0;
+                                position: absolute;
+                                border-radius: 9px;
+                                top: -9px;
+                                right: -9px;
+                                bottom: -9px;
+                                left: -9px;
+                                z-index: -1;
+                                box-shadow: 0 2px 18px rgba(34, 34, 34, 0.2);
+                                background: #FFFFFF;
+                                border: 1px dotted transparent;
+                                transform: scale(0.96);
+                                transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),opacity 150ms ease-out,border-color 200ms ease-out;
+                            }
+                            &:hover::before{
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                            div.suggested-searches__wrapper-img{
+                                width:100%;
+                                margin:0 auto;
+                                img{
+                                    border-radius: 50%;
+                                    width:100%;
+                                    object-fit: cover;
+                                    display:block;
+                                    max-width: 60px;
+                                    margin:0px auto;
+                                }
+                            }
+                            p{
+                                font-family: "GraphikRegular";
+                                font-size:0.8125rem;
+                                line-height:18px;
+                                font-weight: 700;
+                                margin-top:10px;
+                                width:84px;
+                                letter-spacing: 0.1px;
+                                text-align:center;
+                                overflow: hidden;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                display: -webkit-box;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper-box-products{
+            @include rpsMobie{
+                padding:0 6px;
+            }
+            @include rpsTablet{
+                padding:0 12px;
+            }
+            @include rpsPc{
+                padding:0 18px;
+            }
+
+            .box-products__heading{
+                display: flex;
+                align-items: center;
+                margin-bottom:12px;
+                h2{
+                    margin-right:8px;
+                    font-family: "GraphikLight";
+                    font-size:16px;
+                    line-height:20px;
+                    font-weight:700;
+                }
+                h3{
+                    font-family: "GraphikLight";
+                    font-size: 13px;
+                    line-height:18px;
+                    font-weight:400;
+                }
+                a{
+                    display: inline-block;
+                    text-decoration:none;
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight:inherit;
+                    line-height:inherit;
+
+                    &:hover{
+                        text-decoration:underline;
+                        color:$color__text-main;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#box-tab-products{
+    width:100%;
+    max-width: 1400px;
+    margin:0px auto;
+    margin-bottom:30px;
+    .tab-products-wrapper, .tab-products{
+        @include rpsMobie{
+            margin:0 12px;
+        }
+        @include rpsTablet{
+            margin:0 24px;
+
+        }
+        @include rpsPc{
+            margin:0 36px;
+        }
+        .tab-products{
+            .tab-products__heading{
+                padding-bottom:18px;
+                font-family: "GraphikRegular";
+                text-align: center;
+                font-weight:700;
+                @include rpsMobie{
+                    font-size:1.5rem;
+                    line-height:32px;
+                }
+                @include rpsTablet{
+                    font-size:1.75rem;
+                    line-height:38px;
+                }
+                @include rpsPc{
+                    font-size: 1.75rem;
+                    line-height: 38px;
+                }
+            }
+            .tab-products__title-wrapper{
+                overflow-x: auto;
+                overflow-y: hidden;
+                width:100%;
+                margin-bottom:18px;
+                @include rpsTablet{
+                    overflow:visible;
+                    width:auto;
+                }
+            }
+            .tab-products__title{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                border-bottom:2px solid rgba(34,34,34, 0.15);
+
+                .tab-products__title--btn:first-child{
+                    margin-left:0;
+                }
+                .tab-products__title--btn:last-child{
+                    margin-right:0;
+                }
+                .tab-products__title--btn.active::after{
+                    width:100%;
+                    border-bottom: 2px solid rgba(34, 34, 34, 1);
+                }
+                .tab-products__title--btn{
+                    display:flex;
+                    flex:1;
+                    text-align: center;
+                    justify-content:center;
+                    padding:12px 0px;
+                    margin:0px 16px;
+                    font-size:1rem;
+                    position: relative;
+                    align-items : center;
+                    outline: none;
+                    cursor: pointer;
+                    background:none;
+                    border:none;
+                    white-space: normal;
+                    font-family: "GraphikLight";
+                    p{
+                        font-size:1rem;
+                        font-family: "GraphikLight";
+                        font-weight: 700;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                    }
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -2px;
+                        width: 0;
+                        border-bottom: 2px solid rgba(34, 34, 34, 0.5);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: width 200ms cubic-bezier(0.54, 0, 0.54, 1);
+                    }
+                    &:hover::after{
+                        width:100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+#box-our-selections{
+    @include rpsMobie{
+        margin-bottom:60px;
+    }
+    @include rpsTablet{
+        margin-bottom:60px;
+    }
+    @include rpsPc{
+        margin-bottom:90px;
+    }
+    .our-selections-wrapper{
+        width:100%;
+        max-width:1400px;
+        margin:0 auto;
+        @include rpsMobie{
+            padding:0 6px;
+        }
+        @include rpsTablet{
+            padding:0 12px;
+        }
+        @include rpsPc{
+            padding:0 18px;
+        }
+        .our-selections-content{
+            @include rpsMobie{
+                padding:0 6px;
+            }
+            @include rpsTablet{
+                padding:0 12px;
+            }
+            @include rpsPc{
+                padding:0 18px;
+            }
+            .our-selections__name{
+                display: flex;
+                align-items : center;
+                margin-bottom: 12px;
+                h2{
+                    font-size:1rem;
+                    line-height:20px;
+                    font-weight: 700;
+                    font-family: "GraphikRegular";
+                    color:$color__text-main;
+                }
+                span{
+                    text-decoration: none;
+                    color: $color__text-main;
+                    font-size: 0.8125rem;
+                    font-weight: 400;
+                    line-height: 18px;
+                    font-family: "GraphikLight";
+                    margin-left: 12px;
+                }
+            }
+            .our-selections__main{
+                .products-category{
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    color: $color__text-main;
+                    border-radius:12px;
+                    overflow: hidden;
+                    padding:12px;
+                    border: 1px solid #ccc;
+                    @include rpsMobie{
+                        margin-bottom:12px;
+                    }
+                    @include rpsTablet{
+                        margin-bottom:16px;
+                    }
+                    @include rpsPc{
+                        margin-bottom:18px;
+                    }
+                    &:hover{
+                        box-shadow: 0px 2px 18px rgba(34, 34, 34, 0.2);
+                    }
+                    .products-category__box-image{
+                        margin-top: -12px;
+                        margin-left: -12px;
+                        margin-right: -12px;
+                        margin-bottom: 12px;
+                        img{
+                            width:100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .products-category__title{
+                        text-align: center;
+                        margin: 0;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        @include rpsMobie{
+                            min-height: 36px;
+                        }
+                        @include rpsPc{
+                            min-height: 44px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#box-introduce{
+    @include rpsMobie{
+        margin-bottom:60xp;
+        .composite-shape-one{
+            position: absolute;
+            transform: rotate(30deg);
+            top: 90px;
+            bottom: auto;
+            left: -95px ;
+        }
+        .composite-shape-two{
+            position: absolute;
+            top: 10px;
+            right: -80px;
+            transform: scale(0.8);
+        }
+        .composite-shape-three{
+            position: absolute;
+            right: 0;
+            bottom: -44px;
+            transform: rotate(-5deg);
+        }
+    }
+    @include rpsTablet{
+        margin-bottom:60px;
+        .composite-shape-one{
+            position: absolute;
+            transform: rotate(30deg);
+            top: 90px;
+            bottom: auto;
+            left: -95px ;
+        }
+        .composite-shape-two{
+            position: absolute;
+            top: 10px;
+            right: -80px;
+            transform: scale(0.8);
+        }
+        .composite-shape-three{
+            position: absolute;
+            right: 0;
+            bottom: -44px;
+            transform: rotate(-5deg);
+        }
+    }
+    @include rpsPc{
+        margin-bottom:90px;
+        .composite-shape-one{
+            position: absolute;
+            top:auto;
+            left:0;
+            bottom:-90px;
+            transform: rotate(0deg);
+        }
+        .composite-shape-two{
+            position: absolute;
+            top:-48px;
+            right:100px;
+        }
+        .composite-shape-three{
+            position: absolute;
+            bottom:0;
+            right: -100px;
+        }
+    }
+    .box-introduce-wrapper{
+        padding:36px;
+        background-color:#fdebd2;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        .box-introduce__main{
+            padding-top:36px;
+            padding-bottom:30px;
+            .box-introduce__main--heading{
+                margin-bottom:12px;
+            }
+            .box-introduce__main--link{
+                color:$color__text-main;
+                text-decoration-color: #222222;
+                font-size:1rem;
+                font-family: "GraphikLight";
+                &:hover{
+                    opacity: 0.5;
+                    transition: all 0.5s ease;
+                }
+            }
+            .introduce__main{
+                padding:36px 18px 0px;
+                .introduce__main-detail{
+                    padding-bottom:24px;
+                    margin:0px auto;
+                    >h3{
+                        margin-bottom:6px;
+                        letter-spacing: 0.5px;
+                        font-family: "GraphikLight";
+                        
+                    }
+                    >p{
+                        font-size:1rem;
+                        line-height: 28px;
+                        letter-spacing: 0.5px;
+                        font-family: "GraphikLight";
+                        font-weight: 400;
+                    }
+                }
+                @include rpsMobie{
+                    .box-introduce__main--heading{
+                        font-size:2rem;
+                        line-height:36px;
+                    }
+                    .introduce__main{
+                        .introduce__main-detail{
+                            max-width: 350px;
+                            >h3{
+                                font-size:1.5rem;
+                                line-height:28px;
+                            }
+                        }
+                    }
+                }
+                @include rpsTablet{
+                    .box-introduce__main--heading{
+                        font-size:2.75rem;
+                        line-height: 48px;
+                    }
+                    .introduce__main{
+                        .introduce__main-detail{
+                            max-width: 550px;
+                            >h3{
+                                font-size:2rem;
+                                line-height:36px;
+                            }
+                        }
+                    }
+                }
+                @include rpsPc{
+                    .box-introduce__main--heading{
+                        font-size:2.75rem;
+                        line-height: 48px;
+                    }
+                    .introduce__main{
+                        .introduce__main-detail{
+                            max-width: 550px;
+                            >h3{
+                                font-size:2rem;
+                                line-height:36px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .introduce-question-answer{
+                h4{
+                    font-size:1.25rem;
+                    line-height:28px;
+                    font-family: "GraphikRegular";
+                    font-weight: bold;
+                    margin-top:24px;
+                }
+                a{
+                    text-decoration:none;
+                    display: inline-block;
+                    color:$color__text-main;
+                    margin-top:12px;
+                }
+            }
+        }
+    }
+}
+
+
+

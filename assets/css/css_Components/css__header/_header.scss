@@ -1,0 +1,224 @@
+
+#header{
+    max-width:1400px;
+    @include rpsMobie{
+        padding:0 12px;
+        flex-wrap:wrap;
+    }
+    @include rpsTablet{
+        padding:0 12px;
+        flex-wrap:wrap;
+    }
+    @include rpsPc{
+        padding: 12px 36px;
+    }
+    .header__logo{
+        padding-right: 6px;
+        @include rpsMobie{
+            order:1;
+            padding:6px 6px 6px 0px;
+        }
+        @include rpsTablet{
+            order:1;
+            padding:6px 6px 6px 0px;
+        }
+        @include rpsPc{
+            order:1;
+        }
+        &--link{
+            span{
+                svg{
+                    height: 40px;
+                    width:80px;
+                    fill: $color__logo;
+                }
+            }
+        }
+    }
+    .header__form-search{
+        display: flex;
+        align-items : center;
+        @include rpsMobie{
+            order:3;
+            display:flex;
+            flex-basis: 100%;
+            margin-bottom:12px;
+        }
+        @include rpsTablet{
+            order:3;
+            display:flex;
+            flex-basis: 100%;
+            margin-bottom:12px;
+        }
+        @include rpsPc{
+            order:2;
+            margin-bottom:0;
+            display:block;
+            flex:1;
+            padding-right:18px;
+        }
+        .button-menu--mobile-tablet{
+            padding:12px !important;
+            margin-left:-12px;
+            line-height: 1 !important;
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+            
+            span{
+                display: inline-block;
+                fill: currentColor;
+                vertical-align: middle;
+                height:24px;
+                width:24px;
+            }
+        }
+        .button-menu--mobile-tablet{
+            @include rpsMobie{
+                display:inline-block;
+            }
+            @include rpsTablet{
+                display:inline-block;
+            }
+            @include rpsPc{
+                display:none;
+            }
+        }
+        .wrapper__form-search{
+            flex:1;
+            margin-left:6px;
+
+            form{
+                &:hover input{
+                    border-color: rgba(34, 34, 34, 0.5);
+                }
+                &:hover button{
+                    border-color: rgba(34, 34, 34, 0.5);
+                }
+                display:flex;
+                align-items:center;
+                position:relative;
+                background-color: rgba(34, 34, 34, 0.05);
+                border-radius: 96px;
+                box-shadow: 1px 2px 4px 0 rgba(34, 34, 34, 0.1) inset;
+                input{
+                    width:100%;
+                    color: $color__text-main;
+                    display: block;
+                    font-family: inherit;
+                    font-size: 16px;
+                    line-height: 28px;
+                    height: 48px;
+                    outline: none;
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                    border:1px solid rgba(34,34,34, 0.15);
+                    padding-left: 18px;
+                    border-top-left-radius: 96px;
+                    border-bottom-left-radius: 96px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-right: 0;
+                    box-shadow: none;
+                    background: transparent;
+                    flex: 1;
+                    &:focus{
+                        background-color: rgba(255,255,255,1);
+                        border-color: rgba(34, 34, 34, 0.5);
+                    }
+                    &:focus ~ .header__button-search{
+                        background-color:#222222;
+                        span{
+                            svg{
+                                fill:#ffffff;
+                            }
+                        }
+                    }
+                    &::placeholder{
+                        font-family: "GraphikLight";
+                        font-size:1rem;
+                    }
+                }
+                button{
+                    background: none;
+                    border: none solid transparent;
+                    font: inherit;
+                    cursor: pointer;
+                    text-align: left;
+                    outline: none;
+                    text-decoration: none;
+                    -webkit-tap-highlight-color: transparent;
+                    -webkit-appearance: none;
+                    position: relative;
+                    padding: 12px 21px 12px 15px;
+                    height: 48px;
+                    color: $color__text-main;
+                    font-weight: bold;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    z-index: 10;
+                    transition: all 200ms ease-out;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-top-right-radius: 96px;
+                    border-bottom-right-radius: 96px;
+                    border: 1px solid rgba(34, 34, 34, 0.15);
+                    border-left: 0;
+                    span{
+                        svg{
+                            height: 24px;
+                            width:24px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .header__button-control{
+        @include rpsMobie{
+            order:2;
+        }
+        @include rpsTablet{
+            order:2;
+        }
+        @include rpsPc{
+            order:2;
+        }
+        ul{
+            font-size: 0.8125rem ;
+            .button-control--sign-in{
+                a{
+                    color: $color__text-main;
+                    margin-right:6px;
+                }
+            }
+            .button-control--cart{
+                a{
+                    color: $color__text-main;
+                    padding:12px;
+                    span {
+                        svg{
+                            height: 24px;
+                            width:24px;
+                        }
+                    }                
+                }
+            }
+            .button-control--login{
+                a{
+                    display: flex;
+                    align-items : center;
+                    text-decoration: none;
+                    color:$color__text-main;
+                    font-size: 13px;
+                    line-height: 1.4;
+                    button{
+                        min-height: 36px;
+                        min-width: 36px;
+                        padding:9px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

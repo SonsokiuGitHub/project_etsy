@@ -1,0 +1,54 @@
+.box-sort-filter{
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: rgba(255,255,255, 1);
+    min-width:250px;
+    max-height:550px;
+    z-index: 70;
+    border:1px solid rgba(34,34,34, 0.15);
+    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+    border-radius: 12px;
+    font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-size:13px;
+
+    &__title{
+        display:flex;
+        align-items: center;
+        padding:12px 18px;
+        &--icon{
+            width:18px;
+            height:18px;
+            display:inline-block;
+            fill:currentColor;
+        }
+        &--name{
+            font-weight: 700;
+            font-size:inherit;
+            font-family: inherit;
+            margin-left:2px;
+            strong{
+                font-weight:300;
+            }
+        }
+    }
+
+    &__list{
+        li{
+            display:block;
+            >a{
+                text-decoration: none;
+                color:#222222;
+                display:block;
+                padding:12px 18px;
+                font-weight: 300;
+                font-size:inherit;
+                font-family: inherit;
+            }
+            &:hover{
+                background-color: #EAEAEA;
+            }
+        }
+
+    }
+}

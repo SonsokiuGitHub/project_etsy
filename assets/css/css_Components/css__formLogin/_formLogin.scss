@@ -1,0 +1,258 @@
+
+#content-login{
+    .box-login{
+        display:flex;
+        flex-wrap: wrap;
+        &-wrapper{
+            flex-grow: 1;
+            padding:12px 12px 0px;
+            color:$color__text-main;
+            font-size:14px;
+            line-height:1.4;
+            display: block;
+            margin:0 auto;
+            @include rpsMobie{
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            @include rpsTablet{
+                flex-basis: 66.66667%;
+                max-width: 66.66667%;
+            }
+            @include rpsPc{
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+            @include rpsPcLarge{
+                flex-basis: 25%;
+                max-width: 25%;
+            }
+        }
+
+        &-main{
+            background-color: $bg-color-form-sign-in;
+            margin-bottom:18px;
+            margin-top:18px;
+
+            form{
+                position:relative;
+
+                .login-main-top{
+                    margin:-9px -9px;
+                    display:flex;
+                    flex-wrap:wrap;
+
+                    &-wrapper{
+                        flex-grow: 1;
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        padding:9px;
+                        display:block;
+                        margin:0;
+                    }
+
+                    &__heading{
+                        padding-bottom:18px;
+                        // display:flex;
+                        // align-items: center;
+                        // justify-content: space-between;
+                        h1{
+                            font-size:20px;
+                            line-height: 28px;
+                            font-weight: 700;
+                            font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                        }
+                        p{
+                            line-height:24px;
+                            font-size:16px;
+                            font-weight: 400;
+                            font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                            padding-top:6px;
+                            margin:0;
+                        }
+                    }
+
+                    .form-group{
+                        margin-bottom:18px;
+                        label{
+                            font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                            line-height: 18px;
+                            font-size: 13px;
+                            font-weight: 700;
+                            letter-spacing: 0.1px;
+                            display:block;
+                            margin-bottom:6px;
+                        }
+
+                        input{
+                            transition: border 200ms ease-out,background 200ms ease-out;
+                            color: $color__text-main;
+
+                        }
+                        .form-message{
+                            display: none;
+                        }
+                    }
+                    .form-group.error {
+                        input{
+                            background-color:$bg-form-error-message;
+                            border-color: $border-color-form-error;
+                            transition: all 200ms ease-in;
+                        }
+                        .form-message{
+                            display:block;
+                            color: #A61A2E;
+                            margin-top: 6px;
+                            font-size: 16px;
+                            line-height: 28px;
+                            font-weight: 400;
+                            font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                            transition: opacity 200ms ease-in;
+                        }
+                        
+                    }
+
+                    &__control-sign-in{
+                        display:flex;
+                        align-items: center;
+                        justify-content:space-between;
+                        margin-bottom:18px;
+
+                        .stay-signed-in{
+                            display:flex;
+                            align-items: center;
+                            justify-content:space-between;
+                            position:relative;
+
+                            input{
+                                height: 30px;
+                                width:30px;
+                                margin-right:6px;
+                                opacity: 0;
+                            }
+                            
+                            input[type="checkbox"]:checked+label::before{
+                                background-color:#222222;
+                            }
+                            input[type="checkbox"]:checked+label::after{
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                            label{
+                                font-size:16px;
+                                cursor: pointer;
+                                letter-spacing:0.5px;
+
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    height: 30px;
+                                    width: 30px;
+                                    min-width: 30px;
+                                    left: 0;
+                                    top: 0;
+                                    border: 2px solid rgba(34, 34, 34, 0.3);
+                                    border-radius: 6px;
+                                    transition: all 200ms ease-out;
+                                }
+
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    opacity: 0;
+                                    left: 3px;
+                                    top: 3px;
+                                    width: 24px;
+                                    height: 24px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22%3E%3Cpath fill%3D%22%23FFFFFF%22 d%3D%22M9.057,20.471L2.293,13.707a1,1,0,0,1,1.414-1.414l5.236,5.236,11.3-13.18a1,1,0,1,1,1.518,1.3Z%22%2F%3E%3C%2Fsvg%3E");
+                                    transform: scale(0.5);
+                                    transition: all 200ms ease-out;
+                                }
+                            }
+                        }
+
+                        .forgot-password{
+                            a{
+                                font-size:13px;
+                                color:$color__text-main;
+                                font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+
+                    &__submit{
+                        color:$color__text-primary;
+                        font-size:16px;
+                    }
+
+                    &__trouble-signing-in{
+                        margin:18px 0 0;
+                        a{
+                            display: block;
+                            font-size:13px;
+                            font-weight: 300;
+                            font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                            text-align:center;
+                            color:$color__text-main;
+                        }
+                    }
+                }
+
+                .login-main-horizontal{
+                    position: relative;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(34,34,34, 0.15);
+                    margin:24px 0;
+
+                    span{
+                        color:#595959 !important;
+                        position:absolute;
+                        left: 50%;
+                        top:-21px;
+                        transform: translateX(-50%);
+                        padding:12px;
+                        background-color: #FFFFFF;
+                    }
+                }
+
+                .login-main-bottom{
+                    .login-other{
+                        margin-bottom:12px;
+                        color:$color__text-main;
+                        font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                        font-size:16px;
+                        &__btn{
+                            
+                            justify-content:center;
+                             
+
+                            &-icon{
+                                display: flex;
+                                align-self: center;
+                                margin-right:6px;
+                            }
+                        }
+                    }
+
+                    &__describe{
+                        text-align: left;
+                        padding-top:6px;
+                        font-family: "GraphikLight",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 18px;
+                        color:$color__text-main;
+
+                        a{
+                            color:$color__text-main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

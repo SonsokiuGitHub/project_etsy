@@ -1,0 +1,36 @@
+@mixin text__title($fontSize) {
+    @if $fontSize == 16 {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    @else if $fontSize == 13{
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }    
+}
+
+@mixin rpsMobie{
+    @media only screen and (min-width:0px){
+        @content;
+    }    
+}
+
+@mixin rpsTablet{
+    @media only screen and (min-width:641px){
+        @content;
+    }
+}
+
+@mixin rpsPc{
+    @media only screen and (min-width:900px){
+        @content;
+    }
+}
+
+@mixin rpsPcLarge{
+    @media only screen and (min-width:1400px){
+        @content;
+    }
+}

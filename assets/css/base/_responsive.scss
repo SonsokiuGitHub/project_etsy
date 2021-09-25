@@ -1,0 +1,490 @@
+// @media (min-width:0px){
+//     // #header{
+//     //     padding: 0 12px;
+//     //     flex-wrap: wrap;
+//     //     .header__logo{
+//     //         order:1;
+//     //         padding:6px 6px 6px 0px;
+    
+//     //     }
+//     //     .header__form-search{
+//     //         order:3;
+//     //         display:flex;
+//     //         flex-basis: 100%;
+//     //         margin-bottom:12px;
+//     //         .button-menu--mobile-tablet{
+//     //             display:inline-block;
+//     //         }
+//     //     }
+//     //     .header__button-control{
+//     //         order:2;
+//     //     }
+//     // }
+
+//     // #box-menu-header{
+//     //     display:none;
+//     // }
+
+//     // #banner-home{
+//     //     .banner-home-wrapper{
+//     //         .banner-home__heading{
+//     //             font-size:1.5rem;
+//     //             line-height:28px;
+//     //             padding-top:24px;
+//     //             padding-bottom:6px;
+//     //         }
+//     //         .banner-home__search-content{
+//     //             padding:0px 6px;
+//     //             .search-content--title{
+//     //                 font-size: 1.125rem;
+//     //                 line-height:24px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-products-popular{
+//     //     .wrapper-products-popular{
+//     //         padding:0px 6px;
+//     //         .box-suggested-searches{
+//     //             padding:0px 6px;
+//     //         }
+//     //         .box-recently-viewed{
+//     //             .recently-viewed__wrapper{
+//     //                 padding:0px 6px;
+//     //             }
+//     //         }
+//     //         .box-more-products{
+//     //             .more-products__wrapper{
+//     //                 padding:0px 6px;
+//     //             }
+//     //         }
+//     //         .box-our-picks{
+//     //             .our-picks__wrapper{
+//     //                 padding:0px 6px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-tab-products{
+
+//     //     .tab-products-wrapper{
+//     //         margin:0px 12px;
+//     //         .tab-products{
+//     //             margin:0px 12px;
+//     //             .tab-products__heading{
+//     //                 font-size:1.5rem;
+//     //                 line-height:32px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-our-selections{
+//     //     // margin-bottom:60px;
+//     //     .our-selections-wrapper{
+//     //         // padding:0 6px;
+//     //         .our-selections-content{
+//     //             // padding:0 6px;
+//     //             .our-selections__name{
+//     //                 // flex-direction: column;
+//     //             }
+//     //             .our-selections__main{
+//     //                 .products-category{
+//     //                     // margin-bottom:12px;
+//     //                     .products-category__title{
+//     //                         // min-height: 36px;
+//     //                     }
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     #box-introduce{
+//         margin-bottom:60px;
+//         .box-introduce-wrapper{
+//             .composite-shape-one{
+//                 position: absolute;
+//                 transform: rotate(30deg);
+//                 top: 90px;
+//                 bottom: auto;
+//                 left: -95px ;
+//             }
+//             .composite-shape-two{
+//                 position: absolute;
+//                 top: 10px;
+//                 right: -80px;
+//                 transform: scale(0.8);
+//             }
+//             .composite-shape-three{
+//                 position: absolute;
+//                 right: 0;
+//                 bottom: -44px;
+//                 transform: rotate(-5deg);
+//             }
+//             .box-introduce__main{
+//                 .box-introduce__main--heading{
+//                     font-size:2rem;
+//                     line-height:36px;
+//                 }
+//                 .introduce__main{
+//                     .introduce__main-detail{
+//                         max-width: 350px;
+//                         >h3{
+//                             font-size:1.5rem;
+//                             line-height:28px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     // #footer{
+//     //     .footer-main{
+//     //         .footer-main__body{
+//     //             padding:12px 24px 0px 24px !important;
+//     //         }
+//     //     }
+//     //     .footer-bottom{
+//     //         justify-content:center;
+//     //         .footer-bottom__right{
+//     //             ul{
+//     //                 li{
+//     //                     padding:0px 6px;
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+// }
+
+// @media (min-width: 641px){
+//     // #header{
+//     //     padding: 0px 12px;
+//     //     // justify-content: space-between;
+//     //     flex-wrap: wrap;
+//     //     .header__logo{
+//     //         order:1;
+//     //         padding:6px 6px 6px 0px;
+    
+//     //     }
+//     //     .header__form-search{
+//     //         order:3;
+//     //         display:flex;
+//     //         flex-basis: 100%;
+//     //         margin-bottom:12px;
+//     //         .button-menu--mobile-tablet{
+//     //             display:inline-block;
+//     //         }
+//     //     }
+//     //     .header__button-control{
+//     //         order:2;
+//     //     }
+//     // }
+
+//     // #box-menu-header{
+//     //     display:none;
+//     // }
+
+//     // #banner-home{
+//     //     .banner-home-wrapper{
+//     //         .banner-home__heading{
+//     //             font-size:2rem;
+//     //             line-height:2.25rem;
+//     //             padding-top:30px;
+//     //             padding-bottom:12px;
+//     //         }
+//     //         .banner-home__search-content{
+//     //             padding:0 36px;
+//     //             .search-content--title{
+//     //                 font-size:1.25rem;
+//     //                 line-height:28px;
+
+//     //             }
+//     //         //     .search-content--wrapper{
+
+//     //         //     }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-products-popular{
+//     //     .wrapper-products-popular{
+//     //         padding:0px 12px;
+//     //         .box-suggested-searches{
+//     //             padding: 0px 12px;
+//     //         }
+//     //         .box-recently-viewed{
+//     //             .recently-viewed__wrapper{
+//     //                 padding:0px 12px;
+//     //             }
+//     //         }
+//     //         .box-more-products{
+//     //             .more-products__wrapper{
+//     //                 padding:0px 12px;
+//     //             }
+//     //         }
+//     //         .box-our-picks{
+//     //             .our-picks__wrapper{
+//     //                 padding:0px 12px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-tab-products{
+
+//     //     .tab-products-wrapper{
+//     //         margin:0px 24px;
+//     //         .tab-products{
+//     //             margin:0px 24px;
+//     //             .tab-products__heading{
+//     //                 font-size:1.75rem;
+//     //                 line-height:38px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-our-selections{
+//     //     // margin-bottom:90px;
+//     //     .our-selections-wrapper{
+//     //         // padding:0 12px;
+//     //         .our-selections-content{
+//     //             // padding:0 12px;
+//     //             .our-selections__name{
+//     //                 // flex-direction: row;
+//     //             }
+//     //             .our-selections__main{
+//     //                 .products-category{
+//     //                     // margin-bottom:16px;
+//     //                     .products-category__title{
+//     //                         // min-height: 44px;
+//     //                     }
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     #box-introduce{
+//         margin-bottom:90px;
+//         .box-introduce-wrapper{
+//             .composite-shape-one{
+//                 position: absolute;
+//                 transform: rotate(30deg);
+//                 top: 90px;
+//                 bottom: auto;
+//                 left: -95px ;
+//             }
+//             .composite-shape-two{
+//                 position: absolute;
+//                 top: 10px;
+//                 right: -80px;
+//                 transform: scale(0.8);
+//             }
+//             .composite-shape-three{
+//                 position: absolute;
+//                 right: 0;
+//                 bottom: -44px;
+//                 transform: rotate(-5deg);
+//             }
+//             .box-introduce__main{
+//                 .box-introduce__main--heading{
+//                     font-size:2.75rem;
+//                     line-height: 48px;
+//                 }
+//                 .introduce__main{
+//                     .introduce__main-detail{
+//                         max-width: 550px;
+//                         >h3{
+//                             font-size:2rem;
+//                             line-height:36px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     // #footer{
+//     //     .footer-main{
+//     //         .footer-main__body{
+//     //             padding:36px 24px 24px 24px;
+//     //         }
+//     //     }
+//     //     .footer-bottom{
+//     //         justify-content:center;
+//     //         .footer-bottom__right{
+//     //             ul{
+//     //                 li{
+//     //                     padding:0px 8px;
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+// }
+
+// @media (min-width: 900px){
+//     // #header{
+//     //     padding: 12px 36px;
+//     //     .header__logo{
+//     //         order:1;
+//     //     }
+//     //     .header__form-search{
+//     //         margin-bottom:0;
+//     //         order:2;
+//     //         display:block;
+//     //         flex:1;
+//     //         padding-right:18px;
+//     //         .button-menu--mobile-tablet{
+//     //             display:none;
+//     //         }
+//     //     }
+//     //     .header__button-control{
+//     //         order:2;
+//     //     }
+//     // }
+
+//     // #box-menu-header{
+//     //     display:block;
+//     // }
+
+//     // #banner-home{
+//     //     .banner-home-wrapper{
+//     //         .banner-home__heading{
+//     //             font-size:2rem;
+//     //             line-height:2.25rem;
+//     //             padding-top:30px;
+//     //             padding-bottom:12px;
+//     //         }
+//     //         .banner-home__search-content{
+//     //             .search-content--title{
+//     //                 font-size: 1.25rem;
+//     //                 line-height:28px;
+//     //             }
+//     //         //     .search-content--wrapper{
+
+//     //         //     }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-products-popular{
+//     //     .wrapper-products-popular{
+//     //         padding:0px 18px;
+//     //         .box-suggested-searches{
+//     //             padding:0px 18px;
+//     //         }
+//     //         .box-recently-viewed{
+//     //             .recently-viewed__wrapper{
+//     //                 padding:0 18px;
+//     //             }
+//     //         }
+//     //         .box-more-products{
+//     //             .more-products__wrapper{
+//     //                 padding:0px 18px;
+//     //             }
+//     //         }
+//     //         .box-our-picks{
+//     //             .our-picks__wrapper{
+//     //                 padding:0px 18px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-tab-products{
+//     //     .tab-products-wrapper{
+//     //         margin:0px 36px;
+//     //         .tab-products{
+//     //             margin:0px 36px;
+//     //             .tab-products__heading{
+//     //                 font-size: 1.75rem;
+//     //                 line-height: 38px;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // #box-our-selections{
+//     //     // margin-bottom:90px;
+//     //     .our-selections-wrapper{
+//     //         // padding:0 18px;
+//     //         .our-selections-content{
+//     //             // padding:0 18px;
+//     //             .our-selections__name{
+//     //                 // flex-direction: row;
+//     //             }
+//     //             .our-selections__main{
+//     //                 .products-category{
+//     //                     // margin-bottom:18px;
+//     //                     .products-category__title{
+//     //                         // min-height: 44px;
+//     //                     }
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     #box-introduce{
+//         margin-bottom:90px;
+//         .box-introduce-wrapper{
+//             .composite-shape-one{
+//                 position: absolute;
+//                 top:auto;
+//                 left:0;
+//                 bottom:-90px;
+//                 transform: rotate(0deg);
+//             }
+//             .composite-shape-two{
+//                 position: absolute;
+//                 top:-48px;
+//                 right:100px;
+//             }
+//             .composite-shape-three{
+//                 position: absolute;
+//                 bottom:0;
+//                 right: -100px;
+//             }
+//             .box-introduce__main{
+//                 .box-introduce__main--heading{
+//                     font-size:2.75rem;
+//                     line-height: 48px;
+//                 }
+//                 .introduce__main{
+//                     .introduce__main-detail{
+//                         max-width: 550px;
+//                         >h3{
+//                             font-size:2rem;
+//                             line-height:36px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// //     #footer{
+// //         .footer-main{
+// //             .footer-main__body{
+// //                 padding:36px 24px 24px 24px;
+// //             }
+// //         }
+// //         .footer-bottom{
+// //             justify-content:space-between;
+// //             .footer-bottom__right{
+// //                 ul{
+// //                     li{
+// //                         padding:0px 12px;
+// //                     }
+// //                 }
+// //             }
+// //         }
+// //     }
+// }
